@@ -32,7 +32,8 @@ const prom5 = new Promise((resolve, reject)=>{
 	},(Math.floor(Math.random() * 5000)))
 })
 
-Promise.any([prom1, prom2, prom3])
+window.promises = [prom1, prom2, prom3, prom4, prom5 ];
+Promise.any	(promises)
 .then((value)=>{
 	document.getElementById("output").innerText = value ;
 })
